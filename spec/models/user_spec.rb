@@ -18,17 +18,17 @@ describe User do
   it { should respond_to(:admin) }
   it { should respond_to(:authenticate) }
   it { should respond_to(:microposts) }
-
   it { should respond_to(:feed) }
   it { should respond_to(:relationships) }
-=begin
   it { should respond_to(:followed_users) }
+   it { should respond_to(:following?) }
+    it { should respond_to(:follow!) }
+     it { should respond_to(:unfollow!) }
+ 
   it { should respond_to(:reverse_relationships) }
   it { should respond_to(:followers) }
-  it { should respond_to(:following?) }
-  it { should respond_to(:follow!) }
-  it { should respond_to(:unfollow!) }
-=end
+
+
   it { should be_valid }
   it { should_not be_admin }
 
@@ -194,7 +194,7 @@ describe User do
     
   end
   
-=begin
+
   describe "following" do
     let(:other_user) { FactoryGirl.create(:user) }    
     before do
@@ -217,6 +217,6 @@ describe User do
       its(:followed_users) { should_not include(other_user) }
     end
   end
-=end
+ 
   
 end

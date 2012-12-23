@@ -90,7 +90,7 @@ describe "User pages" do
       it { should have_content(m2.content) }
       it { should have_content(user.microposts.count) }
     end
-=begin
+
     it { should have_selector('h1',    text: user.name) }
     it { should have_selector('title', text: user.name) }
 
@@ -143,7 +143,7 @@ describe "User pages" do
         end
       end
     end
-=end
+
   end
 
   describe "signup page" do
@@ -233,7 +233,7 @@ describe "User pages" do
       specify { user.reload.email.should == new_email }
     end
   end
-=begin
+ 
  describe "following/followers" do
     let(:user) { FactoryGirl.create(:user) }
     let(:other_user) { FactoryGirl.create(:user) }
@@ -261,5 +261,5 @@ describe "User pages" do
       it { should have_link(user.name, href: user_path(user)) }
     end
   end
-=end
+ 
 end
