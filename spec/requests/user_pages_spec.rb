@@ -3,6 +3,7 @@ require 'spec_helper'
 describe "User pages" do
 
   subject { page }
+  #  let(:user) { FactoryGirl.create(:user) }
 
   describe "index" do
     
